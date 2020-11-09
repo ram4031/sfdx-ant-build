@@ -29,6 +29,9 @@ RUN sfdx plugins
 # legacy way to install SFDX-Git-Delta, if you still want to use the sgd command (not needed if you use the Salesforce CLI extension)
 RUN npm install sfdx-git-delta@latest --global
 RUN sgd --version
+
+# install new packager
+RUN sfdx plugins:install sfdx-git-packager
     
 ENV ANT_HOME /usr/share/java/apache-ant
 ENV PATH $PATH:$ANT_HOME/bin
