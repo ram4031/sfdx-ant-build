@@ -34,6 +34,3 @@ RUN sgd --version
 # install new packager
 RUN echo y | sfdx plugins:install sfdx-git-packager
 RUN sfdx plugins
-    
-ENV ANT_HOME /usr/share/java/apache-ant
-ENV PATH $PATH:$ANT_HOME/bin
